@@ -3,22 +3,70 @@ sidebar_position: 1
 sidebar_label: "⚙️ Core (on-demand feeds)"
 ---
 
+# Setting Up The RedStone Core Model 
+Our documentation is designed for non-technical readers to be able implement RedStone's Core Model. ****This is our recommended model**** which provides data feeds to dApps only upon request reducing the costs of putting data onto the blockchain. 
+
+## Prerequisites Before You Begin
+
+- **Basic Knowledge of Smart Contracts:** Understanding how to implement and interact with smart contracts on Ethereum.
+- **Familiarity with Hardhat or Foundry:** Knowing how to use these development environments for building and testing Ethereum applications.
+- **OpenZeppelin Contracts:** Understanding and using OpenZeppelin's library of secure smart contract templates.
+
+## Step-by-Step Guide
+
+### 1. Install Prerequisites
+
+Before we start, we need to install some tools that our project will use. Think of this like adding new features to a software to make it work better.
+
+#### For Hardhat
+1. Open your terminal (this is where you type commands to your computer).
+2. To add the RedStone EVM connector package, type one of these commands:
+   - If you're using Yarn (a package manager for JavaScript):
+     ```bash
+     yarn add @redstone-finance/evm-connector
+     ```
+   - If you're using npm (another package manager for JavaScript):
+     ```bash
+     npm install @redstone-finance/evm-connector
+     ```
+
+#### For Foundry
+Foundry is another tool used for developing on Ethereum. It uses a different method to install packages.
+
+1. Open your terminal.
+2. Navigate to your Foundry project directory by typing:
+   ```bash
+   cd path/to/your/foundry/project
+  ```
+
+3. Install the RedStone EVM connector:
+   ```bash
+     forge install redstone-finance/redstone-oracles-monorepo
+  ```
+4. Install the OpenZeppelin contracts, which the RedStone connector relies on:
+  ```bash
+     forge install OpenZeppelin/openzeppelin-contracts@v4.9.5
+```
+5. Link these new libraries by adding their paths to a file called remappings.txt:
+  ```bash
+echo "@redstone-finance/evm-connector/dist/contracts/=lib/redstone-oracles-monorepo/packages/evm-connector/contracts/
+@openzeppelin/contracts=lib/openzeppelin-contracts/contracts/" >> remappings.txt
+```
+This command tells Foundry where to find the new tools we installed.
+
+### 2. Adjust Your Smart Contracts ENDED HERE 
+Smart contracts are like the rules and logic that run on the blockchain. We need to update them to use data from RedStone.
+
+
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 # ⚙️ Core Model
 
-## Fetching prices on-demand
+The RedStone Core Model is our recommended model providing data feeds to dApps only upon request thereby reducing costs. Data feeds are automatically included in a user's transactions. 
 
-This is our basic operating model when the data is automatically appended to user transaction.
-
-:::tip In Prod
-
-Core model is the most mature way to use RedStone, battle tested in production, protecting >$100M TVL of [DeFi Protocols](https://defillama.com/oracles/RedStone) (not all listed yet) across multiple mainnets. The price feeds have been injected to more than [~50K transactions](https://dune.com/hatskier/redstone).
-
-:::
-
-## Installation
+## Installation Prerequisites 
 
 Install [@redstone-finance/evm-connector](https://www.npmjs.com/package/@redstone-finance/evm-connector) from NPM registry
 
