@@ -3,8 +3,6 @@ sidebar_position: 1
 sidebar_label: "♦️ What is RedStone Oracles?"
 ---
 
-## Overview
-
 There is a growing need for decentralized applications (dApps) to access data feeds that are frequently updated, reliable, and secure. RedStone Oracles is a leading oracle provider directly fulfilling this need. Trusted by 100+ dApps and securing billions of dollars of value, RedStone provides customizable and cost-efficient data streams for builders empowering the next generation of dApps. RedStone also provides data feeds to blockchains and layer 2 scaling solutions across the entire blockchain ecosystem that are both EVM and non-EVM compatible. The current model of oracle systems suffers from key inefficiencies, all of which RedStone Oracles was specifically designed to solve from the bottom up. This makes RedStone a unique oracle service.
 
 ## The Problems RedStone Solves ♦️
@@ -27,7 +25,7 @@ Overall, RedStone's approach improves efficiency for dApps and significantly red
 
 #### Our Solution
 
-RedStone was designed with a modular architecture making it easy to incorporate new assets and reduce latency, allowing dApps to scale more efficiently. This means constructing the oracle in such a way that its various components—such as data sources, validation mechanisms, and delivery methods—can be easily interchanged, updated, or augmented without disrupting the system’s overall functionality.
+RedStone was designed with a modular architecture making it easy for dApps to incorporate new assets and access data feeds more quickly, allowing dApps to scale more efficiently. This means constructing the oracle in such a way that its various components—such as data sources, validation mechanisms, and delivery methods—can be easily interchanged, updated, or augmented without disrupting the system’s overall functionality.
 
 
 
